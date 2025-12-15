@@ -1,0 +1,395 @@
+
+:root {
+  --background-color-container: #5252529c;
+  --letter-color:rgb(211, 228, 212);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  padding: 10px;
+}
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------Mis CSS------------*/
+
+body {
+  padding-bottom: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: 1s ease-in-out;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/*----Contenedor principal----*/
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+
+
+/*----Columnas y contenedorws----*/
+
+.columns-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.left-column,
+.right-column {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.weather-container, .key-container, .link-container {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color-container);
+    color: var(--letter-color);
+    padding: 20px;
+    border-radius: 12px;
+    font-size: medium;
+}
+
+.left-column .link-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: medium;
+}
+
+
+/*----Clock----*/
+
+.head-hour {
+    width: 100%;
+    text-align: center;
+}
+
+.clock-container {
+    display: inline-block;
+    padding: 20px 50px;
+    background-color: var(--background-color-container);
+    color: var(--letter-color);
+    border-radius: 15px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+
+/*----Weather----*/
+
+.current-grades {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 5px;
+  
+}
+
+.current-grades div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.current-grades ul {
+  width: auto;
+  align-content: center;
+}
+
+.forecast-weather {
+  display: flex;
+  width: 500px;
+  overflow-x: auto;
+}   
+
+.forecast-grades {
+  flex: 0 0 auto;         
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.forecast-grades img {
+  display: block;
+  margin: 5px auto;
+  width: 40px;   
+  height: 40px;
+}
+
+
+/*----Key----*/
+
+.key {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+
+/*----Links----*/
+
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-size: 14px;
+}
+
+.link-list li a {
+    color: #1a73e8;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.link-list li a:hover {
+    text-decoration: underline;
+}
+
+.link-list li button {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.link-list li button:hover {
+    background-color: #c62828;
+}
+
+
+
+/*----Inputs y botones----*/
+
+input, button {
+    margin-top: 10px;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    background-color: #1860fa;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #0444cc;
+}
+
+
+
+/*----------Imágenes------------*/
+
+.current-grades div img {
+  width: 40px;  
+  filter: invert(100%);
+}
+
+.link-image {
+  width: 20px;
+  filter: invert(100%);
+}
+
+.weather-icon {
+  width: auto;
+}
+
+
+
+/*----------Footer------------*/
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5252529c;
+  border-radius: 10px;
+  padding: 10px 0;
+  gap: 300px;
+}
+
+footer nav a img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    filter: invert(100%);
+    
+  }
+  
+  footer nav a img:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+
+
+  /*----CSS de los HTML individuales----*/
+
+  .home-button {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      padding: 8px 14px;
+      background-color: #ffffff;
+      color: var(--letter-color);
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 100;
+      font-family: 'Roboto', sans-serif;
+  }
+
+.clock-alone {
+    padding: 30px;
+    border-radius: 15px;
+    background-color: var(--background-color-container);
+    color: var(--letter-color);
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 120px;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.weather-alone, .key-alone, .link-alone {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color-container);
+    color: var(--letter-color);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 120px;
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
+}
+
+.weather-alone {
+  justify-content: center;
+}
+
+
+
+
+
+  /*----Responsive----*/
+
+  @media (max-width: 900px) {
+      .columns-container {
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .left-column,
+      .right-column {
+          flex: 0 0 auto;
+          width: 90%;
+      }
+
+      .weather-container, .weather-alone, .current-grades {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      footer nav {
+        justify-content: space-around;
+        gap: 0;
+      }
+
+      footer nav img {
+        width: 26px;
+        height: 26px;
+      }
+  }
+  
